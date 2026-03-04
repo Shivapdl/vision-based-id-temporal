@@ -1,0 +1,6 @@
+*.h5 
+Output_Logs/ 
+.ipynb_checkpoints/ 
+__pycache__/ 
+Weights/ 
+Plots/ 
