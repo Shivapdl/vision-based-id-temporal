@@ -60,6 +60,10 @@ Current industry standards rely on RFID ear tags, which are invasive, prone to l
 
 The backbone is a **PointNet** classifier (TensorFlow/Keras) with dual T-Net spatial/feature transforms, operating on 1,500-point dorsal surface manifolds.
 
+
+
+
+
 ---
 
 ## Key Results
@@ -90,6 +94,8 @@ Longitudinal dataset of 9 sows, 89,944 RGB-D frames over 96 hours, collected in 
 ---
 
 ## Method
+
+![TARA architecture](assets/figure2_architecure.png)
 
 ```
 Depth Stream ─▶ Visit Labeling ─▶ PointNet (fθ) ─▶ Frame ID ŷv,i
