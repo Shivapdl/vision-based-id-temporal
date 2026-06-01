@@ -1,6 +1,36 @@
-*.h5 
-Output_Logs/ 
-.ipynb_checkpoints/ 
-__pycache__/ 
-Weights/ 
-Plots/ 
+# Data (shared on request — see README)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model weights & outputs
+checkpoints/*
+results/*
+!checkpoints/.gitkeep
+!results/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large point cloud / depth formats (commit only small samples deliberately)
+*.ply
+*.pcd
+*.bag
+*.npy
+*.npz

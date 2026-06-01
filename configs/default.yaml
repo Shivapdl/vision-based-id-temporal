@@ -1,0 +1,33 @@
+# TARA configuration
+# Edit this file to point the pipeline at your own data and tune parameters.
+# Nothing else in the notebooks should need hardcoded paths.
+
+paths:
+  raw_data: "data/raw"            # incoming RGB-D / point cloud captures
+  processed_data: "data/processed" # output of the segmentation/preprocessing stage
+  checkpoints: "checkpoints"       # saved model weights
+  results: "results"               # metrics, logs, figures
+
+data:
+  num_points: 1500                 # points sampled per dorsal manifold
+  voxel_size_m: 0.005              # 5 mm voxel downsampling
+  roi_min_m: 0.1                   # ROI crop near bound
+  roi_max_m: 0.6                   # ROI crop far bound
+  num_classes: 9                   # set to your number of individuals
+
+training:
+  framework: "tensorflow"
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  train_val_split: 0.8             # 80/20 split on Day 1 baseline
+  seed: 42
+
+# TARA temporal consensus parameters (match the paper defaults)
+tara:
+  tau: 0.99                        # per-frame confidence threshold
+  gamma: 0.50                      # visit-level consensus threshold
+  min_frames_K: 10                 # minimum confident frames per valid visit
+  recalibration:
+    enabled: true
+    consensus_strength_min: 0.50   # visits above this become pseudo-labels
