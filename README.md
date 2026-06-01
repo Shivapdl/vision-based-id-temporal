@@ -1,6 +1,9 @@
 # TARA: Temporal Adaptive Recognition Architecture
 
 ### A Non-Invasive Alternative to RFID — Self-Sustaining 3D Identification of Group-Housed Livestock
+![TARA conceptual framework](assets/figure1_framework.png)
+
+
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
